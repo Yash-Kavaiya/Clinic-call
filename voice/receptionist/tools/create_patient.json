@@ -1,0 +1,8 @@
+{
+  "name": "create_patient",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/create_patient",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "name": "{{name}}", "phone": "{{phone}}", "language": "{{language}}", "consent_ids": ["care", "recording"] },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/create_patient\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"name\":\"Nita Rana\",\"phone\":\"9000011122\",\"language\":\"gu\",\"consent_ids\":[\"care\",\"recording\"]}'"
+}

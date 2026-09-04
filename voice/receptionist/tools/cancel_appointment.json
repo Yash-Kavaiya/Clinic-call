@@ -1,0 +1,7 @@
+{
+  "name": "cancel_appointment",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/cancel_appointment",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "appointment_id": 1, "reason": "caller requested" }
+}

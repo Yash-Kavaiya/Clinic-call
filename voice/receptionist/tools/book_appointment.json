@@ -1,0 +1,9 @@
+{
+  "name": "book_appointment",
+  "description": "Commit a slot_id from get_availability after the caller confirms name, doctor, day, and time.",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/book_appointment",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "patient_id": 1, "slot_id": "1:20260904T1700", "reason": "fever" },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/book_appointment\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"patient_id\":1,\"slot_id\":\"1:20260904T1700\",\"reason\":\"fever\"}'"
+}

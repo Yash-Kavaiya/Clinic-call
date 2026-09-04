@@ -1,0 +1,7 @@
+{
+  "name": "hold_slot",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/hold_slot",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "patient_id": 1, "slot_id": "1:20260904T1700" }
+}

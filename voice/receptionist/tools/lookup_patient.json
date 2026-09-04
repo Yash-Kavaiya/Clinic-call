@@ -1,0 +1,9 @@
+{
+  "name": "lookup_patient",
+  "description": "Identify a patient by calling-line phone. Returns name, language, open appointments. If route is human, transfer.",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/lookup_patient",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "phone": "{{from_phone}}", "call_sid": "{{call_sid}}" },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/lookup_patient\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"phone\":\"+919876543210\"}'"
+}

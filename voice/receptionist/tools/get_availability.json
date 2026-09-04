@@ -1,0 +1,9 @@
+{
+  "name": "get_availability",
+  "description": "List at most 3 bookable slots. Never invent times. Book only returned slot_id values.",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/get_availability",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "date": "YYYY-MM-DD", "specialty": "gp", "language": "gu" },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/get_availability\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"date\":\"2026-09-04\",\"specialty\":\"gp\",\"language\":\"gu\"}'"
+}

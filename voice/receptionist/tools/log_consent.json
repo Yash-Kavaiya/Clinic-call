@@ -1,0 +1,8 @@
+{
+  "name": "log_consent",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/log_consent",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "phone": "{{phone}}", "purposes": ["care", "recording"] },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/log_consent\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"phone\":\"+919876543210\",\"purposes\":[\"care\",\"recording\"]}'"
+}

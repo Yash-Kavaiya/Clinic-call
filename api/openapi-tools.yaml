@@ -1,0 +1,56 @@
+openapi: 3.0.3
+info:
+  title: Clinic OS Voice Tools
+  version: 0.1.0
+  description: Speakable HTTP tools for the Sarvam Receptionist agent. Auth header X-Tool-Key.
+servers:
+  - url: https://YOUR_PUBLIC_HOST
+paths:
+  /tools/lookup_patient:
+    post:
+      operationId: lookup_patient
+      summary: Identify caller by phone
+  /tools/create_patient:
+    post:
+      operationId: create_patient
+  /tools/log_consent:
+    post:
+      operationId: log_consent
+  /tools/get_clinic_hours:
+    post:
+      operationId: get_clinic_hours
+  /tools/get_availability:
+    post:
+      operationId: get_availability
+      description: Returns at most 3 slots. Book only slot_id values from this response.
+  /tools/hold_slot:
+    post:
+      operationId: hold_slot
+  /tools/book_appointment:
+    post:
+      operationId: book_appointment
+      description: Never invent a time. Only pass slot_id from get_availability.
+  /tools/cancel_appointment:
+    post:
+      operationId: cancel_appointment
+  /tools/get_appointment_status:
+    post:
+      operationId: get_appointment_status
+  /tools/transfer_to_human:
+    post:
+      operationId: transfer_to_human
+  /tools/flag_emergency:
+    post:
+      operationId: flag_emergency
+  /webhooks/exotel/status:
+    post:
+      operationId: exotel_status
+  /webhooks/sarvam/on-start:
+    post:
+      operationId: sarvam_on_start
+  /webhooks/sarvam/on-end:
+    post:
+      operationId: sarvam_on_end
+  /webhooks/sarvam/transcript:
+    post:
+      operationId: sarvam_transcript

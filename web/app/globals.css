@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #f4f1ea; color: #1c1917; font-family: "Segoe UI", system-ui, sans-serif; }
+.app { min-height: 100vh; }
+a { color: inherit; }
+button, input, select { font: inherit; }
+.top { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #1f3d2b; color: #f4f1ea; }
+.top nav { display: flex; gap: 16px; }
+.top a { text-decoration: none; opacity: 0.9; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.card { background: #fff; border: 1px solid #ddd4c4; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #eee; font-size: 14px; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+input, select { padding: 8px; border: 1px solid #ccc; border-radius: 6px; min-width: 160px; }
+button { background: #1f3d2b; color: white; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+button.ghost { background: #fff; color: #1f3d2b; border: 1px solid #1f3d2b; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #e8efe9; font-size: 12px; }
+.warn { background: #7f1d1d; }
+.muted { color: #57534e; font-size: 13px; }
+.login { max-width: 360px; margin: 12vh auto; }
+h1 { font-size: 22px; margin: 0 0 12px; }

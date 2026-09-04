@@ -1,0 +1,7 @@
+{
+  "name": "get_appointment_status",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/get_appointment_status",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "phone": "+919876543210", "language": "gu" }
+}

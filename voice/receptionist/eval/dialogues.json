@@ -1,0 +1,125 @@
+{
+  "scoring": "booking accuracy, not fluency. Fail if wrong doctor, wrong slot, invented time, or delayed emergency.",
+  "dialogues": [
+    {
+      "id": 1,
+      "lang": "gu",
+      "turns": ["Mane Dr. Shah ni 5 vage appointment joie"],
+      "expect": "get_availability then book only returned slot_id; confirm name+doctor+time"
+    },
+    {
+      "id": 2,
+      "lang": "hi",
+      "turns": ["Mujhe kal subah dentist chahiye"],
+      "expect": "specialty dental, max 3 slots, confirm before book"
+    },
+    {
+      "id": 3,
+      "lang": "en",
+      "turns": ["What time do you close on Saturday?"],
+      "expect": "get_clinic_hours, no diagnosis"
+    },
+    {
+      "id": 4,
+      "lang": "gu",
+      "turns": ["Seene ma dard chhe"],
+      "expect": "flag_emergency immediately, mention 108"
+    },
+    {
+      "id": 5,
+      "lang": "en",
+      "turns": ["I want to talk to a doctor", "0"],
+      "expect": "transfer_to_human, do not argue"
+    },
+    {
+      "id": 6,
+      "lang": "gu",
+      "turns": ["Mane cancel karvu chhe"],
+      "expect": "lookup then cancel_appointment on open appt"
+    },
+    {
+      "id": 7,
+      "lang": "hi-en",
+      "turns": ["Wait, wrong doctor, Rohan Patel chahiye"],
+      "expect": "barge-in, new availability for dental"
+    },
+    {
+      "id": 8,
+      "lang": "en",
+      "turns": ["Are you open now? I have a headache, which tablet?"],
+      "expect": "hours only; refuse clinical advice; offer GP slot or 108 if urgent"
+    },
+    {
+      "id": 9,
+      "lang": "gu",
+      "turns": ["Navo patient, naam Nita, phone aa j chhe"],
+      "expect": "create_patient then availability"
+    },
+    {
+      "id": 10,
+      "lang": "en",
+      "turns": ["Book me at 17:00 with whoever"],
+      "expect": "do not accept free-text 17:00; call get_availability"
+    },
+    {
+      "id": 11,
+      "lang": "gu",
+      "turns": ["Ravivaar appointment"],
+      "expect": "Sunday closed, offer Monday slots"
+    },
+    {
+      "id": 12,
+      "lang": "hi",
+      "turns": ["Blood aa raha hai"],
+      "expect": "flag_emergency"
+    },
+    {
+      "id": 13,
+      "lang": "en",
+      "turns": ["Press 1 implied, I agree to recording"],
+      "expect": "log_consent recording+care"
+    },
+    {
+      "id": 14,
+      "lang": "gu",
+      "turns": ["Mane shaame na paanch, Meera Shah"],
+      "expect": "match speak_time to slot_id"
+    },
+    {
+      "id": 15,
+      "lang": "en",
+      "turns": ["This is not my name on the file"],
+      "expect": "ask year of birth then transfer if mismatch"
+    },
+    {
+      "id": 16,
+      "lang": "gu",
+      "turns": ["Baccha unconscious chhe"],
+      "expect": "flag_emergency, 108"
+    },
+    {
+      "id": 17,
+      "lang": "en",
+      "turns": ["Reschedule to tomorrow evening"],
+      "expect": "cancel or new book using availability; never invent"
+    },
+    {
+      "id": 18,
+      "lang": "hi",
+      "turns": ["Clinic kahan hai Adajan?"],
+      "expect": "address + maps from get_clinic_hours"
+    },
+    {
+      "id": 19,
+      "lang": "en",
+      "turns": ["I am angry, this bot is useless"],
+      "expect": "transfer_to_human"
+    },
+    {
+      "id": 20,
+      "lang": "gu-en",
+      "turns": ["Give me four slots around lunch"],
+      "expect": "offer max 3"
+    }
+  ]
+}

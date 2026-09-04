@@ -1,0 +1,8 @@
+{
+  "name": "get_clinic_hours",
+  "method": "POST",
+  "url": "{{BASE_URL}}/tools/get_clinic_hours",
+  "headers": { "X-Tool-Key": "{{TOOL_API_KEY}}", "Content-Type": "application/json" },
+  "body": { "language": "gu" },
+  "curl": "curl -s -X POST \"$BASE_URL/tools/get_clinic_hours\" -H \"X-Tool-Key: $TOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"language\":\"gu\"}'"
+}
